@@ -6,3 +6,5 @@ remote-engine/*.tar.gz
 
 # Everything else
 .DS_store
+remote-engine/etc/
+*.tar.gz

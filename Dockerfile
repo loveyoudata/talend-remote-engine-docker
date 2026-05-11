@@ -1,9 +1,12 @@
-FROM azul/zulu-openjdk:11
+FROM azul/zulu-openjdk:17
 
 ARG TALEND_RE_VERSION
 
-ADD remote-engine/Talend-RemoteEngine-V${TALEND_RE_VERSION}-*.tar.gz /opt/talend/
-RUN mv /opt/talend/Talend-RemoteEngine-V${TALEND_RE_VERSION} /opt/talend/remote-engine/
+RUN mkdir -p /opt/talend
+# ADD automatically extracts tar archives, so no manual tar command is needed
+ADD Talend-RemoteEngine-V${TALEND_RE_VERSION}-*.tar.gz /opt/talend/
+# Use a wildcard to handle directories that contain a build suffix
+RUN mv /opt/talend/Talend-RemoteEngine-V${TALEND_RE_VERSION}* /opt/talend/remote-engine/
 COPY entrypoint.sh /usr/local/bin/
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
