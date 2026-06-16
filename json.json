@@ -1,0 +1,17 @@
+{
+    "server": "paccar.snowflakecomputing.com",
+    "password": "{ZA5C37C8E4C5D91457984BE8DF5D2E7E77704E743D0F326B20}",
+    "database": "RAW_TEST_DB",
+    "authentication_mode": "KEY_PAIR",
+    "privateKeyFile": "D:\\Program Files\\Attunity\\Replicate\\auth_keys\\n-EEA_50801_ATTUNITY_TEST_SVC_rsa_key.p8",
+    "stagingtype": "SNOWFLAKE_STAGE",
+    "maxFileSize": 2000,
+    "warehouse": "EEA_50801_SMALL_WH",
+    "oauth": {
+        "client_secret": "{ZAE740717BF2920949207E8806C1AEA312A5DDCCA1E111662F}",
+        "client_id": "ZWQLIK",
+        "$type": "SnowflakeOAuth"
+    },
+    "$type": "SnowflakeSettings",
+    "username": "n-EEA_50801_ATTUNITY_TEST_SVC"
+}
